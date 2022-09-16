@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tdf-LL-CCq">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="iOSAppArchitecture_Kritica" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j2m-RB-WCR">
+                                <rect key="frame" x="168.5" y="524" width="77" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Cloud in"/>
+                                <connections>
+                                    <action selector="cloudInButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GYF-Ap-5hE"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="XVa-dx-uTf">
+                                <rect key="frame" x="32" y="238" width="350" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="AhE-ZO-vDh"/>
+                                    <constraint firstAttribute="height" constant="250" id="qqQ-Pp-l7w"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="j2m-RB-WCR" secondAttribute="bottom" constant="307" id="7si-1A-Ykh"/>
+                            <constraint firstItem="j2m-RB-WCR" firstAttribute="centerX" secondItem="XVa-dx-uTf" secondAttribute="centerX" id="M6j-eV-cdm"/>
+                            <constraint firstItem="XVa-dx-uTf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xrr-yL-QCz"/>
+                            <constraint firstItem="XVa-dx-uTf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="wHZ-2u-7pl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ynn-AH-DNo"/>
+                    <connections>
+                        <outlet property="mainImage" destination="XVa-dx-uTf" id="h4b-uL-mWo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="99.776785714285708"/>
+        </scene>
+        <!--Second Controller-->
+        <scene sceneID="cgj-vX-eep">
+            <objects>
+                <viewController storyboardIdentifier="SecondController" id="FJW-cc-oVj" customClass="SecondController" customModule="iOSAppArchitecture_Kritica" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fJc-PY-bYq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTz-Fy-Taa">
+                                <rect key="frame" x="131" y="458" width="152" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Change Cover page"/>
+                                <connections>
+                                    <action selector="NotificationButtonTapped:" destination="FJW-cc-oVj" eventType="touchUpInside" id="gcC-rk-osh"/>
+                                    <segue destination="1Hl-gt-EoC" kind="unwind" unwindAction="unwindThis:" id="BtM-PI-MVm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jet-Jb-wcg">
+                                <rect key="frame" x="131" y="248" width="152" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Change Cover page"/>
+                                <connections>
+                                    <action selector="protocolButtonTapped:" destination="FJW-cc-oVj" eventType="touchUpInside" id="iuD-wQ-Ssf"/>
+                                    <segue destination="1Hl-gt-EoC" kind="unwind" unwindAction="unwindThis:" id="sTj-zZ-0nY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Protocol and Delegate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kad-lG-CnZ">
+                                <rect key="frame" x="122.5" y="185" width="169" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification and Observer and Closure" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCa-DW-E0f">
+                                <rect key="frame" x="61.5" y="413" width="291" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oaq-UT-CWQ">
+                                <rect key="frame" x="131" y="691" width="152" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Change Cover Page"/>
+                                <connections>
+                                    <action selector="ClosuresButtonTapped:" destination="FJW-cc-oVj" eventType="touchUpInside" id="Fg7-sc-j9C"/>
+                                    <segue destination="1Hl-gt-EoC" kind="unwind" unwindAction="unwindThis:" id="ac0-n9-Bgy"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Closures" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9U-RU-vl5">
+                                <rect key="frame" x="173.5" y="641" width="67" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2nl-f8-szc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Y9U-RU-vl5" firstAttribute="top" secondItem="oTz-Fy-Taa" secondAttribute="bottom" constant="152" id="6eW-tr-wun"/>
+                            <constraint firstItem="kad-lG-CnZ" firstAttribute="top" secondItem="2nl-f8-szc" secondAttribute="top" constant="141" id="7jj-kQ-Me3"/>
+                            <constraint firstItem="oTz-Fy-Taa" firstAttribute="centerX" secondItem="fJc-PY-bYq" secondAttribute="centerX" id="KMt-rb-JnC"/>
+                            <constraint firstItem="oaq-UT-CWQ" firstAttribute="top" secondItem="Y9U-RU-vl5" secondAttribute="bottom" constant="29" id="RDM-eJ-FWg"/>
+                            <constraint firstItem="oTz-Fy-Taa" firstAttribute="top" secondItem="GCa-DW-E0f" secondAttribute="bottom" constant="24" id="VXD-7Q-Lyh"/>
+                            <constraint firstItem="Jet-Jb-wcg" firstAttribute="centerX" secondItem="fJc-PY-bYq" secondAttribute="centerX" id="gHV-TO-gOU"/>
+                            <constraint firstItem="Jet-Jb-wcg" firstAttribute="top" secondItem="kad-lG-CnZ" secondAttribute="bottom" constant="42" id="geF-H6-k97"/>
+                            <constraint firstItem="GCa-DW-E0f" firstAttribute="centerX" secondItem="fJc-PY-bYq" secondAttribute="centerX" id="gld-gL-Urg"/>
+                            <constraint firstItem="Y9U-RU-vl5" firstAttribute="centerX" secondItem="fJc-PY-bYq" secondAttribute="centerX" id="mBB-7y-mus"/>
+                            <constraint firstItem="kad-lG-CnZ" firstAttribute="centerX" secondItem="fJc-PY-bYq" secondAttribute="centerX" id="qLg-Q7-DfW"/>
+                            <constraint firstItem="oaq-UT-CWQ" firstAttribute="centerX" secondItem="fJc-PY-bYq" secondAttribute="centerX" id="ufY-W2-px7"/>
+                            <constraint firstItem="GCa-DW-E0f" firstAttribute="top" secondItem="Jet-Jb-wcg" secondAttribute="bottom" constant="134" id="v6g-Mp-qKs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="NgR-N1-KiG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4E1-WK-jP0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="1Hl-gt-EoC" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1961" y="100"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3lb-pb-3y7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tdf-LL-CCq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZY6-Nk-FSh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="arZ-RA-C1U"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uwR-tY-1VA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="99.776785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="958" height="575"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
